@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Link{% endblock %}
+{% block title %}Creer un nouveau lien{% endblock %}
 
 {% block body %}
-    <h1>Create new Link</h1>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4 text-primary">Créer un nouveau lien</h1>
 
-    {{ include('link/_form.html.twig') }}
+        {{ include('link/_form.html.twig') }}
 
-    <a href="{{ path('app_link_index') }}" class="btn btn-secondary mt-3">Retour à la liste</a>
+        <div class="text-center mt-4">
+            <a href="{{ path('app_link_index') }}" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-arrow-left"></i> Retour à la liste
+            </a>
+        </div>
+    </div>
 {% endblock %}
