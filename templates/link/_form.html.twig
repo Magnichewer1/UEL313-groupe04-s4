@@ -1,4 +1,23 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">{{ title|default('Formulaire') }}</h1>
+
+    {{ form_start(form, {'attr': {'class': 'row g-3'}}) }}
+    <div class="col-12">
+        {{ form_errors(form) }}
+    </div>
+
+    {% for field in form %}
+        {% if field.vars.name != '_token' %}
+            <div class="col-md-6 mb-3">
+                {{ form_label(field, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(field, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(field) }}
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <div class="col-12 text-end">
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+    {{ form_end(form) }}
+</div>
