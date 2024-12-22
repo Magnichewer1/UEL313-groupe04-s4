@@ -1,20 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="example-wrapper">
+        <h1>Bienvenue sur notre application! 🎉</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/User cvtic/Desktop/symfony/UEL313-groupe04-s4/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/User cvtic/Desktop/symfony/UEL313-groupe04-s4/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+        <p>
+            Grâce à Symfony, nous avons amélioré l'application afin de gérer vos liens facilement et de manière efficace.
+        </p>
+        
+        <p>
+            Voici un aperçu rapide de ce que vous pouvez faire ici :
+        </p>
+        <ul>
+            <li><strong>Créer un lien :</strong> Ajoutez rapidement un nouveau lien dans notre base de données.</li>
+            <li><strong>Voir vos liens :</strong> Consultez la liste des liens déjà enregistrés et accédez à leurs détails.</li>
+        </ul>
+        
+        <p>
+            Voici un petit aperçu technique :
+        </p>
+        <ul>
+            <li><strong>Contrôleur :</strong> Le contrôleur qui gère cette fonctionnalité se trouve dans <code>C:/Users/User cvtic/Desktop/symfony/UEL313-groupe04-s4/src/Controller/HomeController.php</code>.</li>
+            <li><strong>Template :</strong> Le template qui génère cette page est situé dans <code>C:/Users/User cvtic/Desktop/symfony/UEL313-groupe04-s4/templates/home/index.html.twig</code>.</li>
+        </ul>
+
+        <p>
+            Plus de détails dans le rapport !
+        </p>
+    </div>
 {% endblock %}
